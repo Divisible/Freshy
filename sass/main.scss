@@ -1,0 +1,216 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+
+body {
+	font-family: $globalFont;
+	font-size: $globalSize;
+}
+
+.head {
+	background-color: $headBG;
+	background-image: url(../img/head-wrapper.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	min-height: 600px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		.logo {
+
+			a {
+				text-decoration: none;
+				transition: $transA;
+				p {
+					font-size: $globalSize + 11px;
+					text-transform: uppercase;
+					line-height: $globalHeight + 26px;
+					color: $colorW;
+				}
+				&:hover {
+					text-decoration: underline;
+					color: $colorW;
+				}
+			}
+		}
+		.navigation {
+
+
+			ul {
+
+				margin-top: 30px;
+				li{
+
+					display: inline-block;
+					a {
+						text-decoration: none;
+						text-transform: uppercase;
+						color: $colorW;
+						display: block;
+						padding: 10px 15px;
+						transition: $transA;
+
+					}
+					&:hover {
+						background-color: $hrefBG;
+						border-radius: 6px;
+					}
+					&:hover:last-child {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.head-title {
+			margin: 140px 0;
+			width: 100%;
+			text-align: center;
+			h1 {
+				font-size: $globalSize + 64px;
+				color: $colorW;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+			}
+
+			p {
+				font-family: $parFont;
+				font-size: $globalSize + 8px;
+				color: $colorW;
+				letter-spacing: 5px;
+			}
+		}
+	}
+}
+
+.about {
+	background-color: $colorW;
+	height: 100%;
+	min-height: 600px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 130px;
+	}
+	article {
+		max-width: 460px;
+	}
+	h2 {
+		@include titleH2;
+	}
+	.line {
+		@include grayL;
+	}
+	p {
+		@include parHint;
+	}
+	span {
+		@include titleH2;
+		font-size: $globalSize + 8;
+	}
+	a {
+		@include btnB;
+		margin-top: 30px;
+		transition: $transA;
+		&:hover {
+			@include btnBH;
+		}
+	}
+	.about-image {
+		position: relative;
+		span {
+			position: absolute;
+			top: 80%;
+			right: 5%;
+			color: $colorW;
+			transition: $transA;
+			&:hover {
+				color: $colorB;
+				cursor: pointer;
+			}
+		}
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.asortyment {
+	height: 100%;
+	min-height: 750px;
+	background-image: url(../img/asort-wrapper.png);
+	background-repeat: repeat;
+	.wrapper {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		text-align: center;
+	}
+	h2 {
+		margin-top: 50px;
+		@include titleH2;
+	}
+	.line {
+		@include grayL;
+		margin-left: 43%;
+	}
+	p {
+		@include parHint;
+	}
+	.asortyment-btn {
+
+	}
+	a {
+		@include btnB;
+		margin-top: 30px;
+		transition: $transA;
+		&:hover {
+			@include btnBH;
+		}
+	}
+}
+
+.services {
+	height: 100%;
+	min-height: 100px;
+	.wrapper {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		margin-top: 70px;
+	}
+	.services-items {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	.services-item {
+		max-width: 370px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	img {
+		margin-bottom: 20px;
+		border-radius: 50%;
+	}
+	h3 {
+		@include titleH3;
+	}
+
+	p {
+		@include parHint;
+		text-align: center;
+	}
+	.services-btn {
+
+		a {
+		@include btnB;
+		transition: $transA;
+		&:hover {
+			@include btnBH;
+			}
+		}
+	}
+}

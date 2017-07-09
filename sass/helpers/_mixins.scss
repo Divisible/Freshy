@@ -1,0 +1,50 @@
+@import "variables";
+
+@mixin titleH2 {
+	color: $colorB;
+	font-size: $globalSize + 18;
+	font-family: $globalFont;
+	text-transform: uppercase;
+}
+
+@mixin titleH3 {
+	color: $colorB;
+	font-size: $globalSize + 10;
+	font-family: $globalFont;
+	text-transform: uppercase;
+}
+
+@mixin parHint {
+	color: $colorG;
+	font-size: $globalSize;
+	line-height: $globalHeight + 7;
+	font-family: $parFont;
+}
+@mixin parHintS {
+	color: $colorG;
+	font-size: $globalSize;
+	line-height: $globalHeight;
+	font-family: $parFont;
+}
+
+@mixin grayL {
+	width: 85px;
+	border-bottom: 1px solid $colorG;
+	margin-bottom: 30px;
+}
+
+@mixin btnB {
+	display: inline-block;
+	text-align: center;
+	color: $colorW;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: $hrefBG;
+	padding: 16px 22px;
+	border-radius: 6px;
+}
+
+@mixin btnBH {
+	background-color: $colorW;
+	color: $colorB;
+}
